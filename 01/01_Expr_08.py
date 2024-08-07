@@ -4,14 +4,13 @@ def sqrt_n_times(x, n):
  return x
 
 def cube_root(y):
- ans = y
- ans = sqrt_n_times(ans, 2)
- ans *= sqrt_n_times(ans, 2)
- ans *= sqrt_n_times(ans, 4)
- ans *= sqrt_n_times(ans, 8)
- ans *= sqrt_n_times(ans, 16)
- ans *= sqrt_n_times(ans, 32)
- return ans
+ y = sqrt_n_times(y, 2)
+ y *= sqrt_n_times(y, 2)
+ y *= sqrt_n_times(y, 4)
+ y *= sqrt_n_times(y, 8)
+ y *= sqrt_n_times(y, 16)
+ y *= sqrt_n_times(y, 32)
+ return y
 
 def main():
  q = float(input())
