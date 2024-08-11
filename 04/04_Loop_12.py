@@ -1,25 +1,22 @@
+n = int(input())
+
 mna:int = 999999999999999999
 mxa:int = -999999999999999999
 mnb:int = 999999999999999999
 mxb:int = -999999999999999999
 
-i:int = 0
-x = str(input())
-
-while (x != "Zig-Zag") and (x != "Zag-Zig"):
+for i in range(n):
   if i%2:
-    a, b = x.split(' ')
+    a, b = str(input()).split(' ')
   else:
-    b, a = x.split(' ')
+    b, a = str(input()).split(' ')
   a, b = int(a), int(b)
   mna:int = min(mna, a)
   mxa:int = max(mxa, a)
   mnb:int = min(mnb, b)
   mxb:int = max(mxb, b)
-  x = str(input())
-  i += 1
 
-if x == "Zig-Zag":
+if str(input()) == "Zig-Zag":
   print(mnb, mxa)
 else:
   print(mna, mxb)
